@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "OCC",
+  "description": "Office Click Collector",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "hoge.html"
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.officeapps.live.com/*"
+      ],
+      "js": ["script.js"],
+      "all_frames": true
+    }
+  ]
+}
